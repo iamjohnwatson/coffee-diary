@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akash's Coffee Diary (but it's a map)</title>
+  <link rel="icon" href="bean.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link href="https://fonts.cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="loading-screen">
+    <div class="coffee-cup"></div>
+    <div id="loading-text">BREWING MAP...</div>
+  </div>
+
+  <header>
+    <h1>Akash's Coffee Diary (but it's a map)</h1>
+  </header>
+
+  <div id="map"></div>
+  
+  <button id="zoomToggleBtn" class="control-button" title="Toggle World/Country View">
+    <img src="globe.svg" alt="Globe" id="zoomIcon" />
+  </button>
+
+  <button id="helpBtn" class="control-button" title="Help & Information">
+    <img src="bean.svg" alt="Help" />
+  </button>
+
+  <div id="toast">Click on a coffee bean to learn more!</div>
+
+  <div id="helpDialog">
+    <div class="dialog-content">
+      <button class="close-dialog">&times;</button>
+      <h2>Coffee Diary Map Guide</h2>
+      <p>Welcome to Akash's Coffee Diary Map! Here's how to use it:</p>
+      <ul>
+        <li><strong>Explore Coffee Points</strong>: Each bean icon represents a coffee estate or origin.</li>
+        <li><strong>View Details</strong>: Click on any bean to see information about that coffee.</li>
+        <li><strong>Change View</strong>: Use the globe button in the bottom right to toggle between world view and regional view.</li>
+        <li><strong>Navigation</strong>: Zoom in/out with the +/- buttons or mouse wheel. Click and drag to move around the map.</li>
+      </ul>
+      <p>Happy coffee exploring!</p>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
