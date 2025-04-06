@@ -185,7 +185,7 @@ window.addEventListener('load', function() {
   // Coffee data processing
   let coffeeMarkers = [];
   
-  fetch('coffee.json')
+  fetch('Coffee.json')
     .then(response => response.json())
     .then(coffeeData => {
       coffeeMarkers = coffeeData.map((coffee) => {
